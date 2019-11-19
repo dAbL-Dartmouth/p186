@@ -438,14 +438,14 @@ def plot_permutation_violins(
 def plot_feature_search(
     pipeline, X=None, y=None, X_test=None, y_test=None, config_file="config.yml"
 ):
-    """[summary]
+    """Plots CV accuracy vs number of features. Optionally includes test set for comparison.
     
     Args:
-        pipeline ([type]): [description]
-        X ([type], optional): [description]. Defaults to None.
-        y ([type], optional): [description]. Defaults to None.
-        X_test ([type], optional): [description]. Defaults to None.
-        y_test ([type], optional): [description]. Defaults to None.
+        pipeline (sklearn pipeline): Feature selection pipeline.
+        X (array, optional): Matrix of features. Defaults to None.
+        y (array, optional): Array of labels. Defaults to None.
+        X_test (array, optional): Matrix of features, test set. Defaults to None.
+        y_test (array, optional): Array of labels, test set. Defaults to None.
     
     Returns:
         [type]: [description]
@@ -550,10 +550,10 @@ def plot_coefficients(k='auto', config_file="config.yml"):
 
 
 def plot_confusion_matrix(filename=None, config_file="config.yml"):
-    """[summary]
+    """Plots confusion matrix.
     
     Args:
-        filename ([type], optional): [description]. Defaults to None.
+        filename (str, optional): Desired filename for plot. Defaults to None.
     """
     now = str(datetime.now().strftime("%Y%m%d"))
     config = load_config(config_file)
@@ -586,7 +586,7 @@ def plot_confusion_matrix(filename=None, config_file="config.yml"):
 
 
 def plot_pca(config_file="config.yml"):
-    """[summary]
+    """Creates scatterplot of first two principal components.
     """
     now = str(datetime.now().strftime("%Y%m%d"))
     config = load_config(config_file)
@@ -621,10 +621,10 @@ def plot_pca(config_file="config.yml"):
 
 
 def plot_box(filename=None, config_file="config.yml"):
-    """[summary]
+    """Creates boxplots of predicted probabilites for each sample, grouped by true labels.
     
     Args:
-        filename ([type], optional): [description]. Defaults to None.
+        filename ([type], optional): Desired filename for plot. Defaults to None.
     """
     now = str(datetime.now().strftime("%Y%m%d"))
     config = load_config(config_file)
@@ -679,11 +679,11 @@ def plot_box(filename=None, config_file="config.yml"):
 
 
 def get_feature_names(k="auto", selector_object=None, config_file="config.yml"):
-    """[summary]
+    """Retrieves feature names from selection pipeline.
     
     Args:
-        k ([type], optional): [description]. Defaults to None.
-        selector_object ([type], optional): [description]. Defaults to None.
+        k (int, optional): Size of featureset to retrieve. Defaults to "auto".
+        selector_object (sklearn pipeline, optional): Pipeline object. Defaults to None.
     
     Returns:
         [type]: [description]
@@ -715,13 +715,14 @@ def get_feature_names(k="auto", selector_object=None, config_file="config.yml"):
 
 
 def get_coefficients(feature_names, config_file="config.yml"):
-    """[summary]
+    """Retrieve logistic regression coefficients for specified featureset.
+    This function supports the coefficient bar graph.
     
     Args:
-        feature_names ([type]): [description]
+        feature_names (list): Names of selected features.
     
     Returns:
-        [type]: [description]
+        coefficients (list): Coefficients.
     """
     config = load_config(config_file)
     X, y = load_data(config["MAIN"], config_file=config_file)
@@ -733,6 +734,7 @@ def get_coefficients(feature_names, config_file="config.yml"):
 
 
 def process_pval(p):
+    """Rounds p-value to three decimal places, or returns a string if it is below .001"""
     if p < 0.001:
         return "< 0.001"
     else:
