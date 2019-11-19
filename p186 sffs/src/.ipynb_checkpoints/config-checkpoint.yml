@@ -1,0 +1,53 @@
+---
+
+##########
+# CONFIG #
+##########
+
+RUN_NAME: CMV - No Jason
+
+##############
+# FILE PATHS #
+##############
+
+MAIN: ../data/processed/2019-10-15-transmission-pp-repaired.csv
+SELECTOR: ../data/processed/selector_nojason.joblib
+PERMUTATION_TEST: ../data/processed/perm_test_nojason.joblib
+
+#################
+# DATA SETTINGS #
+#################
+
+TARGET: transmission
+TEST: False
+META_COLS:
+  - Sample
+  - Cohort
+  - serum (ml)
+  - plasma (ml)
+  - date of sample (dd/mm/year)
+  - days after infection onset
+  - Subject no.
+  
+CLASSES:
+  - NT
+  - T
+
+#####################
+# PIPELINE SETTINGS #
+#####################
+
+ESTIMATOR:
+  CODE: RF
+  
+K_FEATURES: 6
+
+CORRELATION_FILTER:
+  USE: Y
+  THRESHHOLD: .90
+  
+MUTUAL_INFO_FILTER:
+  USE: Y
+  NO_FEATURES: 10
+
+...
