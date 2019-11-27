@@ -1,9 +1,6 @@
 # ******************************************************************************
-# Author      : Srivamshi Pittala
-# Advisor     : Prof. Chris Bailey-Kellogg
-# Project     : Profectus T2
+# # Prepared by Joshua Weiner for Co-immunization of DNA and Protein in the Same Anatomical Sites Induces Superior Protective Immune Responses against SHIV Challenge
 # Decription  : Helper function for backward feature selection
-# Cite        : TBD
 # ******************************************************************************
 
 takeOffOneFeat = function(feats,survObject,LL_prev,feat_idx_list,plots,dir_res){
