@@ -1,9 +1,5 @@
 # ******************************************************************************
-# # Modified by : Joshua Weiner for Co-immunization of DNA and Protein in the Same Anatomical Sites Induces Superior Protective Immune Responses against SHIV Challenge
-# Originally Produced by
-# Author      : Srivamshi Pittala (srivamshi.pittala.gr@dartmouth.edu)
-# Advisor     : Prof. Chris Bailey-Kellogg (cbk@cs.dartmouth.edu) & Prof. Margaret E. Ackerman
-# Project     : Profectus T2
+# # Prepared by Joshua Weiner for Co-immunization of DNA and Protein in the Same Anatomical Sites Induces Superior Protective Immune Responses against SHIV Challenge
 # Description : Help file for running the scripts to analyze luminex and functional measurements
 #				associated with the Profectus HIV vaccine trial T2
 # ******************************************************************************
