@@ -1,9 +1,6 @@
 # ******************************************************************************
-# Author      : Srivamshi Pittala
-# Advisor     : Prof. Chris Bailey-Kellogg
-# Project     : NIH 10-332
+# # Prepared by Joshua Weiner for Co-immunization of DNA and Protein in the Same Anatomical Sites Induces Superior Protective Immune Responses against SHIV Challenge
 # Description : Performs binomial logistic classification using elastic net
-# Cite        : TBD
 # ******************************************************************************
 
 glmnetBiClass = function(feats,predVec,weights,numFeat,intc,alpha,cvFolds,repeatRun){
