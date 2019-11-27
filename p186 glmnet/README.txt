@@ -1,5 +1,6 @@
 # ******************************************************************************
-# # Prepared by Joshua Weiner for Co-immunization of DNA and Protein in the Same Anatomical Sites Induces Superior Protective Immune Responses against SHIV Challenge
+# All code herein was originally prepared by Srivamshi Pittala and is deposited at https://github.com/vamships/profectusT2
+# This revision was prepared by Joshua Weiner for Co-immunization of DNA and Protein in the Same Anatomical Sites Induces Superior Protective Immune Responses against SHIV Challenge
 # Description : Help file for running the scripts to analyze luminex and functional measurements
 #				associated with the Profectus HIV vaccine trial T2
 # ******************************************************************************
