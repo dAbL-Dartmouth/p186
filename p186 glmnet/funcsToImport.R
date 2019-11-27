@@ -1,9 +1,5 @@
 # ******************************************************************************
-# Modified by : Joshua Weiner for Co-immunization of DNA and Protein in the Same Anatomical Sites Induces Superior Protective Immune Responses against SHIV Challenge
-# Originally Produced by
-# Author      : Srivamshi Pittala
-# Advisor     : Prof. Chris Bailey-Kellogg
-# Project     : Profectus T2
+# # Prepared by Joshua Weiner for Co-immunization of DNA and Protein in the Same Anatomical Sites Induces Superior Protective Immune Responses against SHIV Challenge
 # Description : Imports the necessary packages, functions, and defines global variables
 # ******************************************************************************
 # Copyright (C) <2018>  <Srivamshi Pittala>
